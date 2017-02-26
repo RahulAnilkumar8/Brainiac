@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+html{
+    overflow: hidden;
+}
+body {
+	margin: 0;
+	padding: 0;
+    position: relative;
+	text-align: center;
+	line-height: 100vh;
+	overflow: hidden;
+}
+
+canvas {
+	display: inline-block;
+	vertical-align: middle;
+	
+	width: 100vw;
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+    background: ;
+    background: linear-gradient(#0D47A1 ,#03A9F4);
+}
+@media screen and (max-aspect-ratio: 1/1){
+	canvas{
+		height: 100vh;
+
+		left: -50vh;
+		margin-left: 50%;
+		width: auto;
+	}
+}
+/*** REVIEW OVERLAY ***/
+
+#overlay{
+	display: block;
+	min-height: 100vh;
+	width: 100%;
+	background: rgba(255,255,255,0.9);
+	padding: 5% 48px;
+	padding-top: 36px;
+	color: black;
+	position: absolute;
+    top: 0;
+    z-index: 2;
+	font-family: "Lato", sans-serif;
+    line-height: 1.15;
+    /** allow user to scroll topics **/
+    /**overflow: scroll;**/
+}
+#overlay h1{
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: 700;
+	margin: 0.75rem 0;
+	
+	
+}
+#overlay p {
+	font-size: 1.15em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+#overlay .topic {
+	border-radius: 8px;
+	background: #08596a;
+	font-size: 1.5em;
+	padding: 1rem 0.5rem;
+	margin-bottom: 0.5em;
+	text-align: center;
+	font-weight: 300;
+	color: #fff;
+}
+#overlay .setting{
+	height: 36px;
+	width: 36px;
+	display: none;
+	position: absolute;
+	top: 14px;
+	right: 6px;
+	background: url("https://rawgit.com/google/material-design-icons/master/action/svg/production/ic_settings_48px.svg");
+	background-size: cover;
+}
+#overlay{
+	opacity: 0;
+	transition: all 1s ease;
+}

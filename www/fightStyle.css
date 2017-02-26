@@ -1,0 +1,268 @@
+/**
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#Fight  {
+  background: #f9f4f4;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  
+}
+
+canvas {
+  height: 60vh;
+  width: 100vw;
+  background: #08596a;
+  margin: 0;
+  padding: 0;
+}
+
+#Fight > div {
+  background: #f9f4f4;
+  height: 35vh;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 2.5vh;
+  padding: 0;
+  border-top: 5px solid  #08596a;
+  border-bottom: 5px solid  #08596a;
+}
+#Question {
+  font-size: 1rem;
+  background: #f9f4f4;
+  height: 70%;
+  width: calc(100% - 2em);
+  margin: 0 1em;
+  border: 3px dashed #cfc6c6;
+  margin-top: 1vh;
+}
+
+input
+{
+  height: 20%;
+  margin: 1.75vh 0; 
+}
+#userInput {
+  width: calc(100% - 7em);
+  margin-left: 1em;
+  border: 3px dashed #cfc6c6;
+  background-color: #fefefe;
+}
+#attack
+{
+  width: 5em;
+  background-color: #0dbe90;
+  color: white;
+  border: 1px solid #0dbe90;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-family: Impact, Charcoal, sans-serif;
+  height: 20%;
+}
+
+.Options{
+    font-size:20px;
+}
+
+@keyframes flashIn {
+    0% {opacity:1;}
+    25%{opacity:0;}
+    50%{opacity:1;}
+    75%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.flash-in {
+  animation: flashIn 1s infinite;
+}
+
+.is-paused {
+  animation-play-state: paused;
+  opacity: 1 !important;
+}
+**/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#Fight {
+  background: #f9f4f4;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  
+}
+
+canvas {
+  height: 60vh;
+  width: 100vw;
+  background: #08596a;
+  margin: 0;
+  padding: 0;
+}
+#qa {
+	background: #f9f4f4;
+	font-size: 16px;
+    height: 35vh;
+    width: 95vw;
+    margin: 0 auto;
+    margin-top: 2.5vh;
+    padding: 0.5em 0.5em;
+    border-top: 5px solid #08596a;
+	  text-align: center;
+	position: relative;
+}
+#question {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+	line-height:  1.15;
+	vertical-align: middle;
+	text-align: left;
+}
+#topic, #course {
+	font-weight: 600;
+	color: #08596a;
+	text-transform: capitalize;
+	
+}
+#course:after {
+	content: "\00bb";
+	margin: 0 4px;
+	font-family: sans-serif;
+}
+#topic:after {
+	content:": ";
+}
+#question img{
+    vertical-align: text-top;
+    max-height: calc(35vh - 32px - 3.5em);
+}
+.options {
+	border: none;
+	line-height: 2;
+	font-size: 1em;
+	width: calc(50% - 32px);
+	height: calc(50% - 3em);
+	display: inline-block;
+	margin: 8px 8px;
+	font-weight: 800;
+	font-family: sans-serif;
+	
+	color: white;
+	background: #08596a;
+	border-radius: 4px;
+	text-transform: capitalize;
+}
+.response{
+	border: none;
+	line-height: 1.5;
+	font-size: 1em;
+	background: rgba(8,59,106,0.1);
+	padding: 0.5em;
+	width: calc(100% - 6em);
+	display: inline-block;
+	margin: 8px 8px;
+	font-family: sans-serif;
+	border-radius: 4px;
+	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.response:focus {
+ box-shadow: 0px 0px 5px #08596a;
+}
+.attack
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 8px 8px;
+	line-height: 1.35;
+	width: 4.5em;
+	font-size: 1em;
+	background: #08596a;
+	border: none;
+	border-radius: 4px;
+	padding: 0.5em;
+}
+.wrong{
+	transition: all 1s ease;
+	background: #bf0d10;
+}
+/** can switch from wrong to correct but not vice-versa **/
+.correct{
+	transition: all 1s ease;
+	background: #0dbe90;
+}
+
+@keyframes flashIn {
+    0% {opacity:1;}
+    25%{opacity:0;}
+    50%{opacity:1;}
+    75%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.flash-in {
+  animation: flashIn ease 1s infinite;
+}
+
+.is-paused {
+  animation-play-state: paused;
+  opacity: 1 !important;
+}
+#lightbox{
+	background: rgba(0,0,0,0.75);
+	color: white;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0; 
+	text-align: center;
+	overflow-y: auto;
+    overflow-x: hidden;
+	display: none;
+}
+#lightbox:target{
+	display: block;
+}
+#lightbox p{
+	position: absolute;
+	top: 8px;
+	right: 32px;
+}
+#lightbox img{
+	margin-top: calc(36px + 1em);
+	width: calc(100% - 64px);
+	margin-bottom: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow:0 0 25px #111;
+}
+
+
+
+
+

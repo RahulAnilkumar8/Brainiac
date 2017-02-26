@@ -1,0 +1,101 @@
+*, *:before, *:after
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+  text-align: center;
+}
+body
+{
+
+  display: inline-block;
+  width: 80vw;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+.logo
+{
+  margin-top: 5vh;
+  width: 45%;
+  max-width: 300px;
+  max-height: 300px;
+}
+h1
+{
+  margin: 0; 
+  font-weight: 100;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: rgba(0,0,0,0.65);
+}
+input
+{
+  display: inline-block;
+  width: 100%;
+  margin-top: 5vh;
+  outline: none;
+}
+input:not([type="submit"])
+{
+  border: 0px solid rgba(0,0,0,0.25);
+  border-bottom-width: 1px;
+  font-size: 1.25em;
+  padding: 0.25em;
+  /**padding-left: 2.5em;**/
+  padding-bottom: 0.5em;
+  /**background: url("http://placehold.it/32x32") no-repeat 0.25em 0.125em;**/
+  transition: border-color 0.25s ease-out;
+}
+input:not([type="submit"]):focus
+{
+  border-color: #08596a;
+  border-bottom-width: 2px;
+  
+}
+input[type="text"]
+{
+  margin-top: 10vh;
+/*username icon**/
+}
+input[type="password"]
+{
+/*pass icon**/
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+}
+
+button
+{
+  width: 100%;
+  font-size: 2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  border-width: 0px;
+  border-radius:0.25rem;
+  background: #0dbe90;
+  padding: 0.25rem;
+  color: white;
+  display: block;
+  margin: 5vh auto 5vh;
+} 
+@media screen and (min-aspect-ratio: 1/1)
+{
+    button
+    {
+        width: 50%;
+    }
+  
+  input:not([type="submit"])
+  {
+    width: 46%;
+  }
+  #login input[type="password"]
+  {
+    margin-left: 4%;
+  }
+}

@@ -1,0 +1,447 @@
+.tabs {
+    font-size: 0;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.tabs:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.tabs .tab {
+    display: inline;
+}
+
+.tab:not(:last-of-type) .tab-label::after {
+    content: '';
+    height: 4px;
+    background: #edeff0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    width: 95%;
+    width: calc(100% + 40px);
+    background-color: #ccc;
+}
+
+.tabs {
+    text-align: center;
+}
+
+.tabs .tab-label {
+    counter-increment: steps;
+    display: inline-block;
+    min-width: 48px;
+    width: calc(25% - 40px);
+    max-width: 150px;
+    position: relative;
+    float: none;
+    margin: 0.4em 40px 0.4em 0;
+}
+
+.tab .tab-label span:before {
+    content: counter(steps);
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    font-size: 1rem;
+    color: white;
+    background-color: #08596a;
+    border-radius: 100%;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-left: -13px;
+    transition: 1s ease 0s;
+}
+
+.tab .tab-label span {
+    font-size: 1rem;
+    padding-top: 34px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    transition: 1s ease 0s;
+}
+
+.tabs .tab > [type="radio"] {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    opacity: 0;
+    position: fixed;
+    width: 1px;
+    z-index: -1;
+}
+
+.tabs .tab-panel {
+    display: inline;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.tabs .tab-content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    background: transparent;
+    float: left;
+    font-size: 16px;
+    font-size: 1rem;
+    margin-top: 42px;
+    width: 100%;
+    text-align: center;
+}
+
+.tabs .tab [type="radio"]:checked ~ .tab-panel {
+    display: inline;
+}
+
+.tabs .tab [type="radio"]:checked ~ .tab-label span {
+    color: #08596a;
+}
+
+.tabs .tab [type="radio"]:disabled ~ .tab-label span:before {
+    background: #aaa;
+}
+
+.tabs .tab [type="radio"]:disabled ~ .tab-label span {
+    color: #aaa;
+}
+
+.tabs .tab .passed span:before {
+    background: #08596a;
+}
+
+.tabs .tab .passed span {
+    color: black;
+}
+
+.tabs .tab .passed:after {
+    background: #08596a;
+}
+
+
+/*
+
+=======================================
+UNIMPORTANT STYLES BEGIN HERE
+=======================================
+
+*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 1em;
+    counter-reset: steps;
+    font-family: "Lato", sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+.tabs {
+    color: #222;
+}
+
+button {
+    color: black;
+}
+input {
+    outline: none;
+}
+
+.tabs a:link,
+.tabs a:visited,
+.tabs a:hover,
+.tabs a:focus,
+.tabs a:active {
+    color: #999;
+    text-decoration: none;
+}
+
+body > h3 {
+    font-variant: small-caps;
+    letter-spacing: .0625em;
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+p {
+    line-height: 1.5;
+    max-width: 50em;
+}
+input{
+    outline-color: transparent;
+}
+
+@media(max-width: 400px) {
+    .tabs .tab-label:after {
+        display: none;
+    }
+    .tabs .tab-label span:before {
+        display: none;
+    }
+    .tabs .tab-label {
+        min-width: 25%;
+        width: 25%;
+        width: calc(25% - 10px);
+        background: rgba(0, 0, 0, 0.15);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .tabs .tab-label span {
+        margin: 0;
+        padding: 1em 0;
+    }
+}
+
+/********** SIGN UP *****************/
+body{
+    text-align: center;
+}
+.logo {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-top: 5vh;
+    height: 35%;
+    height: 35vw;
+    max-width: 150px;
+    max-height: 150px;
+    transition: all 1s ease;
+}
+.next {
+    display: inline-block;
+    margin: 0.75em 0;
+    width: 100%;
+    max-width: 15em;
+    font-size: 1.5em;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    border-width: 0px;
+    border-radius: 0.25rem;
+    /* background: #08596a; */
+    background: #0dbe90; 
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+} 
+
+.tab:nth-child(1) input {
+    display: inline-block;
+    width: 100%;
+    border: 0px solid rgba(0, 0, 0, 0.25);
+    border-bottom-width: 1px;
+    background: transparent;
+    font-size: 1.25em;
+    padding: 0.25em 0.25em 0.5em 2.5em;
+    transition: border-color 0.25s ease-out;
+}
+.tab:nth-child(1) input[placeholder = "Password"]{
+    background: url("http://s20.postimg.org/4nyj3edeh/icon_pass.png") no-repeat 0.25em 0.125em;
+}
+.tab:nth-child(1) input[placeholder = "Email"]{
+    background: url("http://s20.postimg.org/da1snzpeh/icon_user.png") no-repeat 0.25em 0.125em;
+}
+
+.tab:nth-child(1) input + input {
+    margin-top: 1.5em;
+}
+
+.tab:nth-child(1) input:focus {
+    border-color: #08596a;
+    border-bottom-width: 2px;
+}
+
+.wrapper {
+    vertical-align: middle;
+    line-height: 3em;
+    height: 3em;
+}
+.remove {
+    float: right;
+    height: 1.5em;
+    width:  1.5em;
+    border: 0;
+    background: transparent;
+}
+.remove::before {
+    content: "✖";
+    color: white;
+}
+.tab:nth-child(2) input[type="text"] {
+    display: inline-block;
+    min-width: 100px;
+    width: 70%;
+    width: calc(100vw - 130px);
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: #08596a;
+    font-weight: 300;
+    font-size: 1.5em;
+    height: 70%;
+    padding: 0 20px;
+    border: 0px solid rgba(0, 0, 0, 0.25);
+    transition: border-color 0.25s ease-out;
+}
+
+.tab:nth-child(2) input[type="text"]:focus {
+    border-color: #08596a;
+    border-bottom-width: 2px;
+}
+
+.tab:nth-child(2) input[type="button"] {
+    width: 1.5em;
+    margin: 0;
+    display: inline-block;
+    background-color: #08596a;
+    font-size: 2.5em;
+    height: 100%;
+    color: white;
+    border: none;
+}
+
+#courses {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+#courses li {
+    display: inline-block;
+    width: 90%;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5em;
+    background: #08596a;
+    margin-bottom: 10px;
+    padding: 10px;
+    opacity: 1;
+    animation: fadeIn .3s linear forwards;
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    background: url(http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=10191777) no-repeat;
+    background-size: cover;
+    padding-top: 5em;
+    max-width: 400px;
+    width: 100%;
+}
+.tab:nth-child(3){
+    text-align: center;
+    margin-top: 0;
+}
+.tab:nth-child(3) .option {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 16px;
+}
+
+.tab:nth-child(3) .boxoptions {
+    width: 50%;
+    width: calc(100% - 100px);
+    display: inline-block;
+    line-height: 50px;
+    height: 50px;
+    border: 3px solid #08596a;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    vertical-align: top;
+    font-weight: 400;
+    color: #665e5e;
+    font-size: 20px;
+}
+
+.tab:nth-child(3) .left {
+    background: url(http://s20.postimg.org/5il2pfl95/Leftarrow_icon.png) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 3px solid #08596a;
+}
+
+.tab:nth-child(3) .right {
+    background: url(http://s20.postimg.org/qcxf79fmh/Nextarrow_icon.png) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 3px solid #08596a;
+}
+.left:active, .right:active{
+    background: #08596a !important;
+}
+.logoOff{
+    display: none;
+}
+.tab:nth-child(4) dl {
+    text-align: left;
+    display:  inline-block;
+}
+.tab:nth-child(4) dt {
+    float: left;
+    clear: left;
+    width: 5em;
+    text-align: right;
+    font-weight: bold;
+    color: #08596a;
+  }
+.tab:nth-child(4) dd {
+    margin: 0 0 0 6.5em;
+    padding: 0;
+  }
+#revStyles {
+    height: auto;
+    width: 100%;
+}
+.message{
+    width: 100%;
+    background: #b71c1c;
+    color: white;
+    font-size: 1em;
+    padding: 0.5em 0;
+    margin-bottom: 1em; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

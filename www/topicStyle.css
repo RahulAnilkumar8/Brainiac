@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 12px;
+	padding-top: 48px;
+    font-family: "Lato", sans-serif;
+}
+label[for="topic"] span {
+	font-weight: 900;
+	font-size: 1.15em;
+}
+
+#topic {
+	display: inline-block;
+    width: 100%;
+    outline: none;
+    border: 0px solid rgba(0,0,0,0.25);
+    border-bottom-width: 1px;
+    font-size: 1.5em;
+    padding: 0.25em;
+    transition: border-color 0.25s ease-out;
+}
+#topic:focus
+{
+  border-color: #08596a;
+  border-bottom-width: 2px;
+  
+}
+
+.next,
+.skip {
+	width: 100%;
+	font-size: 1.15em;
+	padding: 0.25em;
+	margin-top: 0.25em;
+	border: none;
+	border-radius: 2px;
+    
+    font-size: 1.5em;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    border-radius: 4px;
+    background: #0dbe90;
+    padding: 0.25rem;
+    color: white;
+    display: block;
+}
+
+.next {
+	position: relative;
+	margin-top: calc(100vh - 250px);
+}
+.setting{
+	height: 36px;
+	width: 36px;
+	display: inline-block;
+	position: fixed;
+	top: 14px;
+	right: 18px;
+	background: url("https://rawgit.com/google/material-design-icons/master/action/svg/production/ic_settings_48px.svg");
+	background-size: cover;
+	filter: invert(100%);
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Brainiac Sign-Up</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="styles.css" rel=stylesheet type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/signup.js" type="text/javascript"></script>
+</head>
+
+<body onload="onDeviceReady()">
+
+    <img class="logo" src="http://s20.postimage.org/cff91yhjx/logo.png" alt="">
+    <div class="tabs">
+
+        <div class="tab">
+            <input class="tab-radio" type="radio" id="tab-1" name="tab-group-1" checked>
+            <label class="tab-label" for="tab-1"><span>Info</span></label>
+            <div class="tab-panel">
+                <div class="tab-content">
+                    <div class="error"></div>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="next" onclick="nextStep(1)">Next Step</button>
+                    <a href="login.html"> Already have an account? </a>
+                    <!--<a href='fight.html?{"email":"psndth@gmail.com"}'> Jump to Fight </a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input class="tab-radio" type="radio" id="tab-2" name="tab-group-1" disabled>
+            <label class="tab-label" for="tab-2"><span>Courses</span></label>
+
+            <div class="tab-panel">
+                <div class="tab-content">
+                    <div class="error"></div>
+                    <div class="wrapper">
+                        <input id="CourseAdd" type="text" placeholder="New Course...">
+                        <input id="add_btn" type="button" value="+" onclick="addList();">
+                    </div>
+
+                    <ul id="courses">
+                    </ul>
+                    <button class="next" onclick="nextStep(2)">Next Step</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input class="tab-radio" type="radio" id="tab-3" name="tab-group-1" disabled>
+            <label class="tab-label" for="tab-3"><span>Character</span></label>
+            <div class="tab-panel">
+                <div class="tab-content">
+                    <div class="error"></div>
+                    <canvas id="char"  width=580 height=650>NOPE</canvas>
+                    <div class="option">
+                        <button class="left" value="hairL"></button>
+                        <div class="boxoptions">Hair</div>
+                        <button class="right" value="hairR"></button>
+                    </div>
+
+                    <div class="option">
+                        <button class="left" value="bodyL"></button>
+                        <div class="boxoptions">Body</div>
+                        <button class="right" value="bodyr"></button>
+                    </div>
+
+                    <div class="option">
+                        <button class="left" value="pantsL"></button>
+                        <div class="boxoptions">Pants</div>
+                        <button class="right" value="pantsR"></button>
+                    </div>
+                    <button class="next" onclick="nextStep(3)">Next Step</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input class="tab-radio" type="radio" id="tab-4" name="tab-group-1" disabled>
+            <label class="tab-label" for="tab-4" disabled><span>Review</span></label>
+            <div class="tab-panel">
+                <div class="tab-content">
+                    <p>Take a look at what you've done. You can fix it by going back. </p>
+                    <dl>
+                        <dt>Name:</dt>
+                        <dd id="revName"></dd>
+                        
+                        <dt>Email:</dt>
+                        <dd id="revEmail"></dd>
+                        
+                        <dt>Password:</dt>
+                        <dd id="revPass"></dd>
+                        
+                        <dt>Courses:</dt>
+                        <dd>
+                            <ul id="revCourses">
+                                
+                            </ul>
+                        </dd>
+                        <dt>Character:</dt>
+                        <dd><canvas id="revChar" width=580 height=650></canvas></dd>
+                    </dl>
+
+                    <button class="next" onclick="save()"> Done </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

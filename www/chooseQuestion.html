@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brainiac - Save Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300|Raleway:600,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="questionStyle.css">
+  <!--<script src = "js/signin.js" rel = "text/javascript"></script>-->
+  <!---
+  //fonts
+ 
+  //favicon
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  -->
+  <script>
+    function choosePage(elem){
+       var info = JSON.parse(decodeURI(location.search).substring(1));
+       info.type = elem.getAttribute("data-href");
+       location.href = "saveQuestion.html?"+ JSON.stringify(info);
+    }
+  </script>
+</head>
+<body>
+    <button class="back" onclick="window.history.back()">&#x25c0; Back</button>
+    <h1>Choose Question Type</h1>
+    <aside><span>Note:</span> It is suggested you make <span>3 Questions per section</span>. The more questions you add, the better this tool works.</aside>
+    <button data-href = "td" class="add" onclick="choosePage(this)">Term / Definition</button>
+    <button data-href = "mc" class="add" onclick="choosePage(this)">Multiple Choice</button>
+    <button data-href = "tf" class="add" onclick="choosePage(this)">True / False</button>
+    <button data-href = "img" class="add" onclick="choosePage(this)">Image</button>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brainiac - Save Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300|Raleway:600,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="questionStyle.css">
+  <script src = "js/question.js" rel = "text/javascript"></script>
+  <!---
+  //fonts
+ 
+  //favicon
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  --->
+</head>
+<body onload="showInput()">
+    <button class="back" onclick="window.history.back()">&#x25c0; Back</button>
+    <h1 id="questionType"></h1>
+    <div id="input">
+        <input type="text" placeholder="Question ... " />
+        <!-- 
+            Add more answer inputs ... if td) add 1, if mc) add 4, if tf) add radio buttons
+        -->
+        
+    </div>
+    <button id="next" class="submit" onclick="more()">Add another</button>
+    <button id="done" class="submit" onclick="send()">Done</button> 
+</body>
+</html>

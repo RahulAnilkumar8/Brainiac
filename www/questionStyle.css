@@ -1,0 +1,242 @@
+*, *::after, *::before{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+h1{
+    padding: 0 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+}
+input, textarea, button{
+    outline: none;
+}
+
+#input {
+    margin: 0 2em;
+}
+#input input[type="text"] {
+    border: 0px solid rgba(0,0,0,0.25);
+    border-bottom-width: 1px;
+    padding-left: 2.5em;
+    padding-bottom: 0.5em;
+    
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    
+    transition: border-color 0.25s ease-out;
+    
+}
+#input input[type="text"]:focus {
+    border-color: #08596a;
+    border-bottom-width: 2px;
+    
+}
+#input * + *:not(img) {
+    margin-top: 0.75rem;
+
+}
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"] + label {
+    display: inline-block;
+    width: calc(50% - 0.25em);
+    margin-left: 0.5em;
+    background: #DCDAD1;
+    
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+    color: black;
+    font-family: sans-serif;
+    
+    transition: all 0.25s ease;
+}
+input[type="radio"] + label:first-of-type {
+    margin-left: 0;
+}
+input[type="radio"]:checked + label{
+    background:  #0dbe90;
+    color: white;
+}
+textarea {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    padding: 0.25em 0.5em;
+    font-size: 1.15em;
+    border: 1px solid rgba(0,0,0,0.25);
+    resize: vertical;
+    min-height: 2em;
+}
+textarea:focus {
+    box-shadow: 0 0 4px 1.5px rgba(8, 89, 106, 0.5); */
+}
+.submit {
+    width: calc(100% - 4rem);
+	font-size: 1.15em;
+	padding: 0.25em;
+	margin: 0.5em 2rem;
+	border: none;
+	border-radius: 2px;
+    
+    font-size: 1.5em;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    border-radius: 4px;
+    background: #0dbe90;
+    padding: 0.25rem;
+    color: white;
+    display: block;
+}
+#next{
+    margin-top: 2rem;
+}
+.back {
+    display: block;
+    margin: 2rem;
+    margin-bottom: 0;
+    font-weight: 200;
+    font-size: 1.5em;
+    font-family: "Lato", Verdana, sans-serif;
+    background: #0dbe90;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+aside {
+    display: inline-block;
+    margin: 0 2rem;
+    background: #eee;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-bottom: 0.75em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    opacity: 0.6;
+}
+aside span{
+    font-weight: 900;
+    color: #08596a;
+    
+}
+.add {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    border: none;
+    display: block;
+    margin: 0 2rem;
+    padding: 0.25em 0.5em;
+    width: calc(100% - 4rem);
+    font-size: 1.5em;
+    
+    text-decoration: none;
+    border-radius: 4px;
+    background: #08596a; 
+    color: white;
+}
+.add + .add {
+    margin-top: 0.5em;
+}
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+h1 {
+	padding: 0 2rem;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-size: 2em;
+}
+
+
+/*** Input Styles ***/
+
+input[type="file"] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+input[type="file"] + label {
+	font-size: 1.25em;
+	font-weight: 700;
+	color: #f1e5e6;
+	background-color: #0dbe90;
+	font-size: 1.25rem;
+	font-weight: 700;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0.625rem 1.25rem;
+	border-radius: 4px;
+	position: relative;
+	line-height: 1.15;
+	vertical-align: middle;
+	z-index: 10;
+	display: inline-block;
+	transition: all 0.5s ease;
+	cursor: pointer;
+    font-family: ;    
+	opacity: 1;
+	transition: all 1s ease;
+}
+label > svg{
+	fill: currentColor;
+}
+
+input[type="file"]:focus + label,
+input[type="file"] + label:hover {
+	background-color: #087f5f;
+	opacity: 1;
+}
+
+img {
+	max-height: 100%;
+}
+
+.dropZone {
+	width: 100%;
+	background: #eee;
+	border: 3px dashed #ccc;
+	border-radius: 8px;
+	text-align: center;
+	position: relative;
+	height: 40vh;
+	line-height: 40vh;
+}
+
+.dropZone img {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	margin-top: -40vh;
+	z-index: 1;
+}
+
+input[type="file"] + .chosen {
+	opacity: 0.5;
+}
